@@ -7,7 +7,7 @@ function gm_authFailure() {
 
 window.initMap = function() {
     //set the default center of the map
-    var myLatlng = new google.maps.LatLng(37.983810, 23.727539);
+    var myLatlng = new google.maps.LatLng(37.983810, 23.727539);//set the default region that your map will show
     var mapOptions = {
         zoom: 4,
         center: myLatlng
@@ -65,10 +65,14 @@ window.initMap = function() {
     //get the address and find the place on the map
     //This function takes an address and calculates the lat and lng .
     function geocodeAddress(geocoder, marker, map) {
+      
         var address = document.getElementById('address').value;
+      
         geocoder.geocode({ 'address': address }, function(results, status) {
             if (status === 'OK') {
                 map.setCenter(results[0].geometry.location);
+              
+                //update the address to our page
                 document.getElementById('current').innerHTML = results[0].formatted_address;
               
                 //update the info window of the marker with the new address
