@@ -1,3 +1,9 @@
+//this global function is called whenever you have an authentication error in googles apis
+function gm_authFailure() {
+  alert("Did you change the API key?\n\n"+"Please check index.html");
+};
+
+
 window.initMap = function() {
     //set the default center of the map
     var myLatlng = new google.maps.LatLng(37.983810, 23.727539);
