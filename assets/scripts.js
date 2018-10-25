@@ -1,4 +1,5 @@
 //this global function is called whenever you have an authentication error in googles apis
+//you have to obtain your own API key from google in order to get access to the APIs features
 function gm_authFailure() {
   alert("Did you change the API key?\n\n"+"Please check index.html");
 };
